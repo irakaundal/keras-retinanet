@@ -45,3 +45,15 @@ for iter, file in enumerate(files):
     img = cv2.resize(img, (320,320))
     cv2.imwrite(img_path, img)
     print(iter+1)
+
+
+# resize test images
+dir_test_img = 'Data/Test'
+files = os.listdir(dir_test_img)
+
+for iter, file in enumerate(files):
+    img_path = os.path.join(dir_test_img, file)
+    img = cv2.imread(img_path)
+    img = cv2.resize(img, (320,320))
+    cv2.imwrite(img_path, img)
+    print(iter+1)
